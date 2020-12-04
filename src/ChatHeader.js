@@ -6,8 +6,13 @@ import PeopleAltRoundedIcon from '@material-ui/icons/PeopleAltRounded';
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
 import HelpRoundedIcon from '@material-ui/icons/HelpRounded';
+import { useSelector } from 'react-redux';
+import { selectChannelName } from './features/appSlice';
 
-function ChatHeader({ channelName }) {
+function ChatHeader() {
+    // { channelName }
+    const channelName = useSelector(selectChannelName);
+
     return (
         <div className="chatHeader">
             <div className="chatHeader__left">
